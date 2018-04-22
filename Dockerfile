@@ -5,4 +5,4 @@ RUN curl https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz | tar xvz 
 
 COPY entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "-c" "/usr/local/bin/entrypoint.sh"]
